@@ -1,3 +1,0 @@
-Language: Português
-Speed: 0.93
-Voice: pt-BR-Wavenet-C
