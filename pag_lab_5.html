@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Atividade - Codificação de Sinais Multimídia</title>
+      
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head> 
+    <body>
+<body style="background-color: #000000">
+    
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container px-lg-5">
+                <a class="navbar-brand" href="">Bem - vindo(a)</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">atividades</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Header-->
+        <header class="py-5">
+            <div class="container px-lg-5">
+                <div class="p-4 p-lg-5 bg-black rounded-5 text-center" style="border: 1px #FFFFFF solid">
+                
+                <div class="p-4 p-lg-5 bg-black rounded-3 text-center">
+                    <div class="m-4 m-lg-1">
+                        <h1 class="display-5 fw-bold text-white">Lab5 - Codificação de Imagem com DWT</h1>
+                        <p class="fs-4 text-white">Objetivos gerais: Efetuar a codificação de imagem e a decodificação por DWT e IDWT, testar funções de Codificação Multinível e Verificar a taxa de compressão só com a Componente de Aproximação.
+<br>
+Áudio Descrição:<br>
+			<audio controls="" autoplay="">
+  <source src="arquivos_lab_5/audio_descricao.mp3">
+  Your browser does not support the audio element.
+</audio>
+                    </p>
+
+<!-- Intro -->
+<p class="mb-5 text-white"></p>
+<p class="mb-5 text-white"></p>
+<h2 class="fs-5 text-white" style="border: 1px solid #FFFFFF; border-radius: 30px; padding: 10px"><b style="border-radius: 10px; padding: 5px; background-color: #FFFFFF; color: #000000">Introdução:</b>
+ <p class="mb-5 text-white"></p>
+ <p class="mb-5 text-white"></p> A presente página tem como objetivo apresentar os resultados obtidos na execução dos Notebooks sobre codificação e decodificação de imagens por DWT, fornecidos pelo Professor  <p></p>
+
+ </h2>
+ <!-- Metodologia -->
+ <h2 class="fs-5 text-white" style="border: 1px solid #FFFFFF; border-radius: 30px; padding: 10px"><b style="border-radius: 10px; padding: 5px; background-color: #FFFFFF; color: #000000">Metodologia:</b>
+    <p class="mb-5 text-white"></p>
+    <p class="mb-5 text-white"></p> Os notebooks utilizam a linguagem de programação Python para realizar todos os procedimentos de codificação, decodificação e tratamento geral das imagens, além do cálculo de métricas para análise das compressões realizadas, como a SNR de Pico (PSNR), o Erro Quadrático Médio (MSE) além da taxa de compressão de cada imagem, em diferentes abordagens de compressão. A biblioteca PyWavelets contém todas as ferramentas necessárias para realizar as codificações por DWT e as inversas. <p></p>
+   
+    </h2>
+			    
+<!-- PEPPERS -->
+</h2><h2 class="fs-5 text-white" style="border: 1px solid #FFFFFF; border-radius: 30px; padding: 10px"><b style="border-radius: 10px; padding: 5px; background-color: #FFFFFF; color: #000000">Item 1:</b> Codificação da Imagem "Peppers"<br><br>
+    <p class="mb-5 text-white"></p>
+    <img src="arquivos_lab_5/peppers_original.png" width="489" height="359" >
+    <p class="mb-5 text-white"></p>
+
+    <p class="mb-3 text-white" style="border: 1px solid #FFFFFF; border-radius: 15px; padding: 10px">i. Codificação de Luminância (P&B) com DWT (Nível 1), utilizando a função PyWavelets.dwt2() <br><br>
+        Imagem em Preto e Branco<br>
+        <img src="arquivos_lab_5/peppers_Y1_original.png" width="489" height="359" >
+        <br><br>
+        Componentes de Aproximação, Vertical, Horizontal e Diagonal de nível 1<br>
+        <img src="arquivos_lab_5/peppers_Y1.png" width="489" height="359" >
+        <br><br>
+        Imagem original X Reconstrução nível 1<br>
+        <img src="arquivos_lab_5/peppers_comp_Y1.png" width="508" height="187" >
+        <br><br>
+    </p> 
+   
+   
+    <p class="mb-3 text-white" style="border: 1px solid #FFFFFF; border-radius: 15px; padding: 10px">ii. Codificação de Luminância (P&B) com DWT (Nível 2), utilizando a função PyWavelets.wavedec2()<br><br>
+        Comparação entre imagem original e reconstruída após compressão<br>
+        <img src="arquivos_lab_5/peppers_Y2_original.png" width="508" height="187" >
+        <br><br>
+        Componentes de Aproximação, Vertical, Horizontal e Diagonal de nível 2<br>
+        <img src="arquivos_lab_5/peppers_Y2.png" width="489" height="359" >
+        <br><br>
+        Matriz com componentes de nível 1 e 2<br>
+        <img src="arquivos_lab_5/peppers_Y2_matriz.png" width="489" height="359" >
+        <br><br>
+    </p> 
+   
+   
+    <p class="mb-3 text-white" style="border: 1px solid #FFFFFF; border-radius: 15px; padding: 10px">iii. Reconstrução da Imagem Colorida com DWT (Nível 1), utilizando a função PyWavelets.dwt2()<br><br>
+        Plano Vermelho (Red)<br>
+        <img src="arquivos_lab_5/peppers_red.png" width="430" height="698" >
+        <br><br>
+        Plano Verde (Green)<br>
+        <img src="arquivos_lab_5/peppers_green.png" width="430" height="698" >
+        <br><br>
+        Plano Azul (Blue)<br>
+        <img src="arquivos_lab_5/peppers_blue.png" width="430" height="698" >
+        <br><br>
+        Reconstrução Nível 1 colorida (somente com coefs. de aproximação de cada plano)<br>
+        <img src="arquivos_lab_5/peppers_cor1.png" width="489" height="359" >
+        <br><br>
+        Reconstrução Colorida Original<br>
+        <img src="arquivos_lab_5/peppers_cor11.png" width="489" height="359" >
+        <br><br>
+    </p> 
+   
+   
+    <p class="mb-3 text-white" style="border: 1px solid #FFFFFF; border-radius: 15px; padding: 10px">iv. Reconstrução da Imagem Colorida com DWT (Nível 2), utilizando a função PyWavelets.wavedec2(), eliminando CD, CV e CH.<br><br>
+        Aproximação N2 Plano Vermelho (Red)<br>
+        <img src="arquivos_lab_5/peppers_red2.png" width="489" height="359" >
+        <br><br>
+        Aproximação N2 Plano Verde (Green)<br>
+        <img src="arquivos_lab_5/peppers_green2.png" width="489" height="359" >
+        <br><br>
+        Aproximação N2 Plano Azul (Blue)<br>
+        <img src="arquivos_lab_5/peppers_blue2.png" width="489" height="359" >
+        <br><br>
+        Reconstrução sem CD, CV e CH<br>
+        <img src="arquivos_lab_5/peppers_cor2.png" width="489" height="359" >
+        <br><br>
+    </p> 
+
+    <p class="mb-3 text-white" style="border: 1px solid #FFFFFF; border-radius: 15px; padding: 10px">v. Eliminação progressiva de CD, depois CD e CV, e por fim CH, CV e CD numa imagem P&B reconstruída por DWT de nível 1<br><br>
+        
+        <img src="arquivos_lab_5/peppers_prog.png" width="485" height="800" >
+        <br><br>
+
+    </p> 
+
+</h2>
+
+<!-- HENRIQUE -->
+</h2><h2 class="fs-5 text-white" style="border: 1px solid #FFFFFF; border-radius: 30px; padding: 10px"><b style="border-radius: 10px; padding: 5px; background-color: #FFFFFF; color: #000000">Item 2-A:</b> Codificação da Imagem do Integrante Henrique<br><br>
+    <p class="mb-5 text-white"></p>
+    <img src="arquivos_lab_5/henrique_original.png" width="489" height="359" >
+    <p class="mb-5 text-white"></p>
+
+    <p class="mb-3 text-white" style="border: 1px solid #FFFFFF; border-radius: 15px; padding: 10px">i. Codificação de Luminância (P&B) com DWT (Nível 1), utilizando a função PyWavelets.dwt2() <br><br>
+        Imagem em Preto e Branco<br>
+        <img src="arquivos_lab_5/henrique_Y1_original.png" width="489" height="359" >
+        <br><br>
+        Componentes de Aproximação, Vertical, Horizontal e Diagonal de nível 1<br>
+        <img src="arquivos_lab_5/henrique_Y1.png" width="489" height="359" >
+        <br><br>
+        Imagem original X Reconstrução nível 1<br>
+        <img src="arquivos_lab_5/henrique_comp_Y1.png" width="508" height="187" >
+        <br><br>
+    </p> 
+   
+   
+    <p class="mb-3 text-white" style="border: 1px solid #FFFFFF; border-radius: 15px; padding: 10px">ii. Codificação de Luminância (P&B) com DWT (Nível 2), utilizando a função PyWavelets.wavedec2()<br><br>
+        Comparação entre imagem original e reconstruída após compressão<br>
+        <img src="arquivos_lab_5/henrique_Y2_original.png" width="508" height="187" >
+        <br><br>
+        Componentes de Aproximação, Vertical, Horizontal e Diagonal de nível 2<br>
+        <img src="arquivos_lab_5/henrique_Y2.png" width="489" height="359" >
+        <br><br>
+        Matriz com componentes de nível 1 e 2<br>
+        <img src="arquivos_lab_5/henrique_Y2_matriz.png" width="489" height="359" >
+        <br><br>
+    </p> 
+   
+   
+    <p class="mb-3 text-white" style="border: 1px solid #FFFFFF; border-radius: 15px; padding: 10px">iii. Reconstrução da Imagem Colorida com DWT (Nível 1), utilizando a função PyWavelets.dwt2()<br><br>
+        Plano Vermelho (Red)<br>
+        <img src="arquivos_lab_5/henrique_red.png" width="430" height="698" >
+        <br><br>
+        Plano Verde (Green)<br>
+        <img src="arquivos_lab_5/henrique_green.png" width="430" height="698" >
+        <br><br>
+        Plano Azul (Blue)<br>
+        <img src="arquivos_lab_5/henrique_blue.png" width="430" height="698" >
+        <br><br>
+        Reconstrução Nível 1 colorida (somente com coefs. de aproximação de cada plano)<br>
+        <img src="arquivos_lab_5/henrique_cor1.png" width="489" height="359" >
+        <br><br>
+        Reconstrução Colorida Original<br>
+        <img src="arquivos_lab_5/henrique_cor11.png" width="489" height="359" >
+        <br><br>
+    </p> 
+   
+   
+    <p class="mb-3 text-white" style="border: 1px solid #FFFFFF; border-radius: 15px; padding: 10px">iv. Reconstrução da Imagem Colorida com DWT (Nível 2), utilizando a função PyWavelets.wavedec2(), eliminando CD, CV e CH.<br><br>
+        Aproximação N2 Plano Vermelho (Red)<br>
+        <img src="arquivos_lab_5/henrique_red2.png" width="489" height="359" >
+        <br><br>
+        Aproximação N2 Plano Verde (Green)<br>
+        <img src="arquivos_lab_5/henrique_green2.png" width="489" height="359" >
+        <br><br>
+        Aproximação N2 Plano Azul (Blue)<br>
+        <img src="arquivos_lab_5/henrique_blue2.png" width="489" height="359" >
+        <br><br>
+        Reconstrução sem CD, CV e CH<br>
+        <img src="arquivos_lab_5/henrique_cor2.png" width="489" height="359" >
+        <br><br>
+    </p> 
+
+    <p class="mb-3 text-white" style="border: 1px solid #FFFFFF; border-radius: 15px; padding: 10px">v. Eliminação progressiva de CD, depois CD e CV, e por fim CH, CV e CD numa imagem P&B reconstruída por DWT de nível 1<br><br>
+        
+        <img src="arquivos_lab_5/henrique_prog.png" width="485" height="800" >
+        <br><br>
+
+    </p> 
+
+</h2>
+
+<!-- JOSÈ -->
+</h2><h2 class="fs-5 text-white" style="border: 1px solid #FFFFFF; border-radius: 30px; padding: 10px"><b style="border-radius: 10px; padding: 5px; background-color: #FFFFFF; color: #000000">Item 2-B:</b> Codificação da Imagem do Integrante José<br><br>
+    <p class="mb-5 text-white"></p>
+    <img src="arquivos_lab_5/jose_original.png" width="489" height="359" >
+    <p class="mb-5 text-white"></p>
+
+    <p class="mb-3 text-white" style="border: 1px solid #FFFFFF; border-radius: 15px; padding: 10px">i. Codificação de Luminância (P&B) com DWT (Nível 1), utilizando a função PyWavelets.dwt2() <br><br>
+        Imagem em Preto e Branco<br>
+        <img src="arquivos_lab_5/jose_Y1_original.png" width="489" height="359" >
+        <br><br>
+        Componentes de Aproximação, Vertical, Horizontal e Diagonal de nível 1<br>
+        <img src="arquivos_lab_5/jose_Y1.png" width="489" height="359" >
+        <br><br>
+        Imagem original X Reconstrução nível 1<br>
+        <img src="arquivos_lab_5/jose_comp_Y1.png" width="508" height="187" >
+        <br><br>
+    </p> 
+   
+   
+    <p class="mb-3 text-white" style="border: 1px solid #FFFFFF; border-radius: 15px; padding: 10px">ii. Codificação de Luminância (P&B) com DWT (Nível 2), utilizando a função PyWavelets.wavedec2()<br><br>
+        Comparação entre imagem original e reconstruída após compressão<br>
+        <img src="arquivos_lab_5/jose_Y2_original.png" width="508" height="187" >
+        <br><br>
+        Componentes de Aproximação, Vertical, Horizontal e Diagonal de nível 2<br>
+        <img src="arquivos_lab_5/jose_Y2.png" width="489" height="359" >
+        <br><br>
+        Matriz com componentes de nível 1 e 2<br>
+        <img src="arquivos_lab_5/jose_Y2_matriz.png" width="489" height="359" >
+        <br><br>
+    </p> 
+   
+   
+    <p class="mb-3 text-white" style="border: 1px solid #FFFFFF; border-radius: 15px; padding: 10px">iii. Reconstrução da Imagem Colorida com DWT (Nível 1), utilizando a função PyWavelets.dwt2()<br><br>
+        Plano Vermelho (Red)<br>
+        <img src="arquivos_lab_5/jose_red.png" width="430" height="698" >
+        <br><br>
+        Plano Verde (Green)<br>
+        <img src="arquivos_lab_5/jose_green.png" width="430" height="698" >
+        <br><br>
+        Plano Azul (Blue)<br>
+        <img src="arquivos_lab_5/jose_blue.png" width="430" height="698" >
+        <br><br>
+        Reconstrução Nível 1 colorida (somente com coefs. de aproximação de cada plano)<br>
+        <img src="arquivos_lab_5/jose_cor1.png" width="489" height="359" >
+        <br><br>
+        Reconstrução Colorida Original<br>
+        <img src="arquivos_lab_5/jose_cor11.png" width="489" height="359" >
+        <br><br>
+    </p> 
+   
+   
+    <p class="mb-3 text-white" style="border: 1px solid #FFFFFF; border-radius: 15px; padding: 10px">iv. Reconstrução da Imagem Colorida com DWT (Nível 2), utilizando a função PyWavelets.wavedec2(), eliminando CD, CV e CH.<br><br>
+        Aproximação N2 Plano Vermelho (Red)<br>
+        <img src="arquivos_lab_5/jose_red2.png" width="489" height="359" >
+        <br><br>
+        Aproximação N2 Plano Verde (Green)<br>
+        <img src="arquivos_lab_5/jose_green2.png" width="489" height="359" >
+        <br><br>
+        Aproximação N2 Plano Azul (Blue)<br>
+        <img src="arquivos_lab_5/jose_blue2.png" width="489" height="359" >
+        <br><br>
+        Reconstrução sem CD, CV e CH<br>
+        <img src="arquivos_lab_5/jose_cor2.png" width="489" height="359" >
+        <br><br>
+    </p> 
+
+    <p class="mb-3 text-white" style="border: 1px solid #FFFFFF; border-radius: 15px; padding: 10px">v. Eliminação progressiva de CD, depois CD e CV, e por fim CH, CV e CD numa imagem P&B reconstruída por DWT de nível 1<br><br>
+        
+        <img src="arquivos_lab_5/jose_prog.png" width="485" height="800" >
+        <br><br>
+
+    </p> 
+
+</h2>
+
+<!-- MILENA -->
+</h2><h2 class="fs-5 text-white" style="border: 1px solid #FFFFFF; border-radius: 30px; padding: 10px"><b style="border-radius: 10px; padding: 5px; background-color: #FFFFFF; color: #000000">Item 2-C:</b> Codificação da Imagem da Integrante Milena<br><br>
+    <p class="mb-5 text-white"></p>
+    <img src="arquivos_lab_5/milena_original.png" width="489" height="359" >
+    <p class="mb-5 text-white"></p>
+
+    <p class="mb-3 text-white" style="border: 1px solid #FFFFFF; border-radius: 15px; padding: 10px">i. Codificação de Luminância (P&B) com DWT (Nível 1), utilizando a função PyWavelets.dwt2() <br><br>
+        Imagem em Preto e Branco<br>
+        <img src="arquivos_lab_5/milena_Y1_original.png" width="489" height="359" >
+        <br><br>
+        Componentes de Aproximação, Vertical, Horizontal e Diagonal de nível 1<br>
+        <img src="arquivos_lab_5/milena_Y1.png" width="489" height="359" >
+        <br><br>
+        Imagem original X Reconstrução nível 1<br>
+        <img src="arquivos_lab_5/milena_comp_Y1.png" width="508" height="187" >
+        <br><br>
+    </p> 
+   
+   
+    <p class="mb-3 text-white" style="border: 1px solid #FFFFFF; border-radius: 15px; padding: 10px">ii. Codificação de Luminância (P&B) com DWT (Nível 2), utilizando a função PyWavelets.wavedec2()<br><br>
+        Comparação entre imagem original e reconstruída após compressão<br>
+        <img src="arquivos_lab_5/milena_Y2_original.png" width="508" height="187" >
+        <br><br>
+        Componentes de Aproximação, Vertical, Horizontal e Diagonal de nível 2<br>
+        <img src="arquivos_lab_5/milena_Y2.png" width="489" height="359" >
+        <br><br>
+        Matriz com componentes de nível 1 e 2<br>
+        <img src="arquivos_lab_5/milena_Y2_matriz.png" width="489" height="359" >
+        <br><br>
+    </p> 
+   
+   
+    <p class="mb-3 text-white" style="border: 1px solid #FFFFFF; border-radius: 15px; padding: 10px">iii. Reconstrução da Imagem Colorida com DWT (Nível 1), utilizando a função PyWavelets.dwt2()<br><br>
+        Plano Vermelho (Red)<br>
+        <img src="arquivos_lab_5/milena_red.png" width="430" height="698" >
+        <br><br>
+        Plano Verde (Green)<br>
+        <img src="arquivos_lab_5/milena_green.png" width="430" height="698" >
+        <br><br>
+        Plano Azul (Blue)<br>
+        <img src="arquivos_lab_5/milena_blue.png" width="430" height="698" >
+        <br><br>
+        Reconstrução Nível 1 colorida (somente com coefs. de aproximação de cada plano)<br>
+        <img src="arquivos_lab_5/milena_cor1.png" width="489" height="359" >
+        <br><br>
+        Reconstrução Colorida Original<br>
+        <img src="arquivos_lab_5/milena_cor11.png" width="489" height="359" >
+        <br><br>
+    </p> 
+   
+   
+    <p class="mb-3 text-white" style="border: 1px solid #FFFFFF; border-radius: 15px; padding: 10px">iv. Reconstrução da Imagem Colorida com DWT (Nível 2), utilizando a função PyWavelets.wavedec2(), eliminando CD, CV e CH.<br><br>
+        Aproximação N2 Plano Vermelho (Red)<br>
+        <img src="arquivos_lab_5/milena_red2.png" width="489" height="359" >
+        <br><br>
+        Aproximação N2 Plano Verde (Green)<br>
+        <img src="arquivos_lab_5/milena_green2.png" width="489" height="359" >
+        <br><br>
+        Aproximação N2 Plano Azul (Blue)<br>
+        <img src="arquivos_lab_5/milena_blue2.png" width="489" height="359" >
+        <br><br>
+        Reconstrução sem CD, CV e CH<br>
+        <img src="arquivos_lab_5/milena_cor2.png" width="489" height="359" >
+        <br><br>
+    </p> 
+
+    <p class="mb-3 text-white" style="border: 1px solid #FFFFFF; border-radius: 15px; padding: 10px">v. Eliminação progressiva de CD, depois CD e CV, e por fim CH, CV e CD numa imagem P&B reconstruída por DWT de nível 1<br><br>
+        
+        <img src="arquivos_lab_5/milena_prog.png" width="485" height="800" >
+        <br><br>
+
+    </p> 
+
+</h2>
+
+<!-- MONTAGEM -->
+</h2><h2 class="fs-5 text-white" style="border: 1px solid #FFFFFF; border-radius: 30px; padding: 10px"><b style="border-radius: 10px; padding: 5px; background-color: #FFFFFF; color: #000000">Item 3:</b> Codificação e reconstrução de foto-montagem do grupo em um nível de DWT com as componentes Y, Cr e Cb<br><br>
+    <p class="mb-5 text-white"></p>
+    <img src="arquivos_lab_5/montagemYCrCb.png" width="500" height="600" >
+    <br><br>
+
+
+
+
+
+
+</h2>
+
+<!-- Resultadoss -->
+</h2><h2 class="fs-5 text-white" style="border: 1px solid #FFFFFF; border-radius: 30px; padding: 10px"><b style="border-radius: 10px; padding: 5px; background-color: #FFFFFF; color: #000000"> Métricas:</b> Tabelas com valores de PSNR e taxa de compressão de cada codificação realizada.<br></br> 
+
+    <p class="mb-3 text-white" style="border: 1px solid #FFFFFF; border-radius: 15px; padding: 10px">1 - Peppers<br><br>
+        
+        <img src="arquivos_lab_5/tabela_peppers.png" width="400" height="115" >
+        <br><br>
+
+    </p> 
+
+    <p class="mb-3 text-white" style="border: 1px solid #FFFFFF; border-radius: 15px; padding: 10px">2.A - Henrique<br><br>
+        
+        <img src="arquivos_lab_5/tabela_henrique.png" width="400" height="115" >
+        <br><br>
+
+    </p> 
+
+    <p class="mb-3 text-white" style="border: 1px solid #FFFFFF; border-radius: 15px; padding: 10px">2.B - José<br><br>
+        
+        <img src="arquivos_lab_5/tabela_jose.png" width="400" height="115" >
+        <br><br>
+
+    </p> 
+
+    <p class="mb-3 text-white" style="border: 1px solid #FFFFFF; border-radius: 15px; padding: 10px">2.C - Milena<br><br>
+        
+        <img src="arquivos_lab_5/tabela_milena.png" width="400" height="115" >
+        <br><br>
+
+    </p> 
+
+    <p class="mb-3 text-white" style="border: 1px solid #FFFFFF; border-radius: 15px; padding: 10px">3 - Foto-montagem<br><br>
+        
+        <img src="arquivos_lab_5/montagem_metricas.png" width="500" height="100" >
+        <br><br>
+
+    </p> 
+
+</h2>
+<!-- Conclusão -->
+ <h2 class="fs-5 text-white" style="border: 1px solid #FFFFFF; border-radius: 30px; padding: 10px"><b style="border-radius: 10px; padding: 5px; background-color: #FFFFFF; color: #000000">Discussões dos resultados:</b><p class="mb-5 text-white"></p>
+ <p class="mb-3 text-white"> As codificações realizadas por DWT em diferentes níveis, com diferentes maneiras de reconstrução (eliminação de componentes), ocasionalmente resultam em diferenças visuais perceptíveis. Quando não, tais diferenças podem ser visualizadas através das métricas extraídas para cada tipo de compressão realizada.</p><br>
+ <p class="mb-3 text-white"> Por exemplo, nota-se, pelas tabelas de métricas, que a compressão das imagens em P&B por DWT de nível 2 apresentaram taxas de compressão muito superiores às de nível 1, como contrapartida de um pequeno acrescimo de ruído nas imagens, isto é, uma pequena redução na SNR de Pico. Por outro lado, nas imagens coloridas, a compressão em nível 2 aumenta substancialmente o ruído nas reconstruções, e o ganho na taxa de compressão não é tão superior quanto nas imagens em P&B.</p>
+ <p class="mb-3 text-white"> Por fim, uma observação é que na compressão da foto-montagem por DWT de nível 1 incluindo todas as componentes Y, Cr e Cb apresentou taxa de compressão menor que 1, isto é, a imagem reconstruida apresentou maior tamanho que a original. Tal comportamento pode ser fruto de algum erro no procedimento de codificação, ou aponta uma deficiencia nesse tipo de compressão. </p>
+ </h2>
+<!-- Refs -->
+ <p class="fs-5 text-white" style="border: 1px solid #FFFFFF; border-radius: 30px; padding: 10px"><b style="border-radius: 10px; padding: 5px; background-color: #FFFFFF; color: #000000">Referências:</b> Links para os Notebooks utilizados.;
+<br>
+    <a href="https://colab.research.google.com/drive/1ltq4lMs2XU915lQ-Uc08Lk_WX9jDWrrp?usp=sharing" target="lank">
+        <i class="m-5 text-white">Notebook Codificação DWT Peppers</i>
+    </a>
+<br><br>
+    <a href="https://colab.research.google.com/drive/1b1C0WpNZvCnUXymqlKGQPGK2IBqvAW-T?usp=sharing" target="lank">
+        <i class="m-5 text-white">Notebook Codificação DWT Henrique</i>
+    </a>
+<br><br>
+    <a href="https://colab.research.google.com/drive/1Ck83BWsh7AXrY3RzmLh-X5Dp6ax6AUxj?usp=sharing" target="lank">
+        <i class="m-5 text-white">Notebook Codificação DWT José</i>
+    </a>
+<br><br>
+    <a href="https://colab.research.google.com/drive/1e636zrL2_hgnuYacat7A0AZ3ZAjTJj_5?usp=sharing" target="lank">
+        <i class="m-5 text-white">Notebook Codificação DWT Milena</i>
+    </a>
+<br><br>
+    <a href="https://colab.research.google.com/drive/1uv-OLDQQcq06E74h-R_JHiY9_RK0sA6U?usp=sharing" target="lank">
+        <i class="m-5 text-white">Notebook Codificação DWT Foto-Montagem</i>
+    </a>
+<br><br>
+</p>                 
+                        
+                    </div>
+                </div>
+            </div>
+        </div></header>
+        <!-- Page Content-->
+        <section class="pt-4">
+            <div class="container px-lg-5">
+                <!-- Page Features-->
+                <div class="row gx-lg-5">
+                    <div class="col-lg-6 col-xxl-4 mb-5">
+                        
+                            
+                        </div>
+                    </div>
+                   
+                    
+                    </div>
+                    <div class="col-lg-auto  mb-5">
+                        <div class="card bg-black border-0 h-100">
+                    
+                    </div>
+                    
+                </div>
+            
+        </section>
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Obrigada pela visita!</p></div>
+        </footer>
+    
+
+</body>
